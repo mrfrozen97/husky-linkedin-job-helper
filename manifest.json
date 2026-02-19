@@ -1,34 +1,50 @@
 {
   "manifest_version": 3,
-  "name": "Hello Extension",
+  "name": "Husky - Job Helper",
   "version": "1.0",
-  "description": "A simple Hello World! extension",
+  "description": "A Simple Extention that helps with Linkedin Job Search",
+
   "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+
+  "action": {
+    "default_title": "Send Greeting",
+    "default_icon": {
       "16": "icon.png",
       "48": "icon.png",
       "128": "icon.png"
+    },
+    "default_popup": "popup.html"
   },
-  "action": {
-      "default_title": "Send Greeting",
-      "default_icon": {
-          "16": "icon.png",
-          "48": "icon.png",
-          "128": "icon.png"
-      },
-      "default_popup": "popup.html"
-  },
-  "permissions": ["activeTab", "scripting"],
-  "background": {
-      "service_worker": "background.js"
-  },
-  "content_security_policy": {
-    "extension_pages": "script-src 'self'; object-src 'self';"
-  },
-  "content_scripts": [
-      {
-        "matches": ["https://www.linkedin.com/jobs/*"],
-        "js": ["content.js"]
-      }
-    ]
 
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "tabs"
+  ],
+
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://www.linkedin.com/jobs/*"],
+      "js": ["dist/content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "assets/icons/*",
+        "icon.png"
+      ],
+      "matches": ["https://www.linkedin.com/*"]
+    }
+  ]
 }

@@ -15,9 +15,10 @@ function extractYearsOfExperience(text) {
     const yearMatch = sentence.match(yearRegex);
     if (yearMatch) {
       const years = parseInt(yearMatch[1]);
-
-      console.log("📌 Found sentence:", sentence.trim());
-      console.log("➡ Years extracted from this sentence:", years);
+    
+    //   Debugging Purpose
+    //   console.log("Found sentence:", sentence.trim());
+    //   console.log("Years extracted from this sentence:", years);
 
       if (!maxYears || years > maxYears) {
         maxYears = years;

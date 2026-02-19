@@ -1,5 +1,10 @@
 // background.js
 
+
+chrome.runtime.onInstalled.addListener(() => {
+    console.log("Background service worker installed and running!");
+});
+
 // Listen for messages from other parts of the extension (e.g., popup or content scripts)
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     if (message.type === 'GREETING') {

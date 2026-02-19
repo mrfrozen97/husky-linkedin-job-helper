@@ -1,0 +1,59 @@
+
+Location: Austin, Texas
+
+
+Citizenship Requirement: U.S. Citizen
+
+
+About the Company
+
+
+We are a venture-backed defense technology startup founded by two former U.S. Navy electrical engineers with deep expertise in robotics and software systems. We are building next-generation autonomous defense systems that combine advanced computer vision, real-time control, and precision targeting.
+
+
+With an engineering-first culture and founders who have successfully built and exited two prior ventures (acquired for a combined $180M), we focus on solving complex, mission-critical technical challenges in a fast-moving environment where exceptional engineers can have real-world impact from day one.
+
+
+The Opportunity
+We are seeking outstanding recent graduates to join our software engineering team in Austin. This role is ideal for candidates from strong universities with an excellent academic track record and exceptional coding ability in C++ and Python.
+
+
+You’ll work on high-performance, real-time systems at the intersection of robotics, autonomy, and advanced computing — solving technically demanding problems in a small, elite team.
+
+
+What You’ll Do
+Design, develop, and optimize high-performance software in C++ and Python
+Build robust, scalable systems for real-time and embedded applications
+Implement efficient algorithms and data structures for computationally intensive problems
+Collaborate closely with mechanical, electrical, and computer vision engineers
+Debug and optimize performance-critical systems (multi-threading, concurrency, memory)
+Contribute to code reviews, testing, and engineering best practices
+Support system integration, testing, and deployment of mission-critical software
+
+
+What We’re Looking For
+Required:
+
+Bachelor’s or Master’s degree in Computer Science, Software Engineering, or a related field from a strong university
+U.S. Citizenship (required due to the nature of the work)
+Excellent coding ability in C++ and Python
+Strong foundation in data structures, algorithms, and systems fundamentals
+Familiarity with concurrency, memory management, and performance optimization
+Experience with Git and modern development workflows
+Strong analytical thinking and problem-solving ability
+
+
+Nice to Have:
+
+Experience with GPU programming (CUDA, OpenCL)
+Exposure to robotics, computer vision, or real-time systems
+Knowledge of networking or distributed systems
+Experience with Docker, CI/CD, or DevOps tooling
+Familiarity with machine learning frameworks (PyTorch, TensorFlow)
+
+
+What We Offer
+Competitive salary
+Equity package
+Health, dental, and vision insurance
+Paid time off

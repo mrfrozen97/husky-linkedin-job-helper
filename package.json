@@ -1,0 +1,18 @@
+{
+  "name": "simple-google-chrome-extension",
+  "version": "1.0.0",
+  "description": "Simple Chrome extension",
+  "main": "background.js",
+  "type": "module",
+  "scripts": {
+    "build": "vite build",
+    "test:sponsor": "node runSponsorshipTests.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "esbuild": "^0.27.3",
+    "vite": "^7.3.1"
+  }
+}

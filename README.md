@@ -1,141 +1,148 @@
-# A Simple Google Chrome Extension
 
-Here's an example of a small Google Chrome extension that displays a "Hello, World!" message when the extension icon is clicked.
+# Husky -  A Chrome Extension to Simplify Job Search
 
-### 1. Create a project folder
+This is a Chrome Extension (Manifest V3) that analyzes job descriptions and classifies visa sponsorship status as:
 
-A new folder for your extension and name it "HelloWorldExtension".
+* Years of Experience Required
 
-### 2. Add a `manifest.json` file
+* 🟢 Sponsor Available
+* 🔴 No Sponsorship
+* 🟡 Unknown
 
-Inside the root folder, create a new file named `manifest.json` and add the following content:
 
-```json
-{
-  "manifest_version": 3,
-  "name": "Hello Extension",
-  "version": "1.0",
-  "description": "A simple Hello World! extension",
-  "icons": {
-      "16": "icon.png",
-      "48": "icon.png",
-      "128": "icon.png"
-  },
-  "action": {
-      "default_title": "Send Greeting",
-      "default_icon": {
-          "16": "icon.png",
-          "48": "icon.png",
-          "128": "icon.png"
-      },
-      "default_popup": "popup.html"
-  },
-  "permissions": ["activeTab", "scripting"],
-  "background": {
-      "service_worker": "background.js"
-  }
-}
+# 📦 Project Structure
 
 ```
-### 3. Add a `background.js` file.
-In Chrome extensions, a background script is a central part of an extension’s architecture. It runs in the background and can handle events, perform tasks in the background, and manage the extension’s state.
-
-With Manifest V3, background scripts have been replaced by service workers, which are more efficient because they don’t run continuously but can be woken up by events.
-
-Example of `background.js` as a Service Worker in Manifest V3:
-
-```javascript
-// background.js
-
-// Listen for messages from other parts of the extension (e.g., popup or content scripts)
-chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
-    if (message.type === 'GREETING') {        
-        console.log('Received greeting:', message.greeting);
-        sendResponse({ response: 'Hello from the background script!' });
-        return true; // Indicates that the response is sent asynchronously
-    }
-});
-
-// Example of handling an event
-chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
-    if (changeInfo.status === 'complete' && tab.active) {
-        console.log('Tab updated:', tab);
-    }
-});
-
-```
-#### When to Use a Background Script/Service Worker
-- **Event handling**: Listening for events that occur in the browser (e.g., tab updates, browser actions).
-- **Persistent state**: Maintaining state or data that should persist between different parts of the extension.
-- **Communication**: Facilitating communication between different parts of the extension (e.g., content scripts, popup scripts).
-
-### 4. Create a new file named "popup.js" and add the following content:
-
-```javascript
-document.addEventListener('DOMContentLoaded', function () {
-    const greetingButton = document.getElementById('greetButton');
-
-    greetingButton.addEventListener('click', () => {
-        chrome.runtime.sendMessage({ type: 'GREETING', greeting: 'Hello, background!' }, (response) => {
-            if (chrome.runtime.lastError) {
-                console.error('Error:', chrome.runtime.lastError);
-                alert('Error communicating with background script');
-                return;
-            }
-            alert('Response from background: ' + response.response);
-        });
-    });
-});
-
+simple-google-chrome-extension/
+│
+├── manifest.json
+├── background.js
+├── popup.html
+├── popup.js
+│
+├── src/
+│   └── parser/
+│       ├── visaSponsorshipParser.js
+|       └── yearParser.js
+│
+├── test_cases/
+│   └── sponsorship_test_cases/
+│       ├── files
+│       └── runSponsorshipTests.js
+│
+├── vite.config.js
+├── package.json
+└── README.md
 ```
 
-### 5. Create a new file named `popup.html` and add the following content:
+---
 
-```html
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Popup</title>
-    <style>
-        body {
-            width: 200px;
-            padding: 20px;
-            font-family: Arial, sans-serif;
-        }
-        button {
-            width: 100%;
-            padding: 10px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #45a049;
-        }
-    </style>
-    <script src="popup.js"></script>
-</head>
-<body>
-    <button id="greetButton">Send Greeting</button>
-</body>
-</html>
+# 🚀 Setup & Installation
 
+## 1️⃣ Install Dependencies
+
+From project root:
+
+```bash
+npm install
 ```
 
-### 5. Create a simple icon file
+---
 
-You can create a basic icon or download one. For this example, we've included a simple green icon with the letter "H". The icon should be 128x128 pixels and saved as `icon.png` in the root folder.
+## 2️⃣ Build the Extension
 
-### 6. Open Google Chrome and navigate to [chrome://extensions](chrome://extensions/).
+```bash
+npm run build
+```
 
-### 7. Enable _Developer mode_ by toggling the switch in the top right corner.
+This uses Vite to bundle your content script into `/dist`.
 
-### 8. Click on _Load unpacked_ and select the "HelloWorldExtension" folder.
+---
 
-### 9. The extension should now appear in the list of installed extensions. You can click on the extension icon to see the greeting button, and clicking the button will display an alert with the response from the background script.
+# 🧩 Load Extension in Chrome
 
-That's it! You've created a basic Google Chrome extension. Feel free to modify the code and experiment with different functionalities. Remember to reload the extension on the chrome://extensions page whenever you make changes to the code.
+1. Open Chrome
+2. Go to:
+
+```
+chrome://extensions
+```
+
+3. Enable **Developer Mode** (top right toggle)
+4. Click **Load Unpacked**
+5. Select the project root folder
+
+After loading, the extension will appear in your extensions list.
+
+---
+
+# 🧪 Running Tests (Test Driven Development)
+
+Your project includes a Node-based test runner for visa sponsorship classification.
+
+## Run Tests
+
+From project root:
+
+```bash
+node test_cases/sponsorship_test_cases/runSponsorshipTests.js
+```
 
 
+# ➕ Adding More Test Cases
+
+To add a new test:
+
+1. Go to:
+
+```
+test_cases/sponsorship_test_cases/
+```
+
+2. Create a new `.txt` file using naming convention:
+
+### For No Sponsorship:
+
+```
+visa_req2.txt
+visa_req3.txt
+```
+
+### For Sponsorship Available:
+
+```
+visa_notreq2.txt
+```
+
+### For Unknown:
+
+```
+visa_unk2.txt
+```
+
+3. Add job description text inside the file.
+4. Re-run:
+
+```bash
+node test_cases/sponsorship_test_cases/runSponsorshipTests.js
+```
+
+No test file modification required.
+
+---
+
+
+
+# 📈 Future Improvements
+
+Possible next steps:
+
+* Scoring-based NLP instead of pure regex
+* Negation direction detection
+* Confidence scoring
+* UI badge indicator
+* GitHub CI integration
+* Convert to Jest for richer testing
+* Adding LLM APIs to asnwer questions like "Why do you want to Work here?"
+
+---

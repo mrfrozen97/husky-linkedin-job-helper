@@ -9,10 +9,11 @@ export function extractVisaStatus(text) {
       /not sponsor/i,
       /unable to sponsor/i,
       /without sponsorship/i,
-      /\b(no|without)\s+(visa\s+)?sponsor(ship|ed|ing)?\b|\b(visa\s+)?sponsor(ship|ed|ing)?\b[\s\S]{0,25}?\b(not\s+(available|offered|required)|not\s+sponsor(ing)?|not\s+provide(d)?|not\s+support(ed)?)\b|\bwe\s+do\s+not\s+sponsor\b/i,
+      /\bno\s+(visa\s+)?sponsor(ship|ed|ing)?\b|\bwithout\s+(visa\s+)?sponsor(ship|ed|ing)?\b|\bwe\s+do\s+not\s+sponsor\b|\b(visa\s+)?sponsor(ship|ed|ing)?\b[\s\S]{0,20}?\bnot\s+(available|offered|provided|support(ed)?)\b/i,
 
       // Citizenship / residency requirements
       /us citizen(ship)? (required|only)/i,
+      /us citizenship/i,
       // Commenting for effecientcy
       // /green card (holder )?(required|only)/i,
       // /permanent resident (required|only)/i,
@@ -32,6 +33,7 @@ export function extractVisaStatus(text) {
       /will sponsor/i,
       /we sponsor/i,
       /sponsorship available/i,
+      /\b(visa\s+)?sponsor(ship|ed|ing)?\b[\s\S]{0,20}?\bnot\s+required\b/i,
     ],
 
     unknown: [

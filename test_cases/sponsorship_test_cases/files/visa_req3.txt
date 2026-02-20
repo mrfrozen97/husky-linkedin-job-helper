@@ -1,0 +1,36 @@
+Do you want to work on leading edge technology? Are you ready to build products that revolutionize history? At Intrinsic you will! We are a modern software development company creating new product solutions across a variety of industries. We build the latest web applications, cloud microservice architectures, and modern simulation technology applications. Send us your info and let us discuss the opportunity!
+Job Description:
+
+Intrinsic is looking for a skilled and self-motivated Full Stack Software Developer that is passionate about building new products and loves to exceed the expectations of customers. As a full stack engineer you will join a highly talented scrum team in building modern web applications, structures code as a collection of services and deploys containerized platforms at the edge. Our full stack engineers work closely with the most capable end users and software engineers on the planet. This is a significant opportunity to implement a product suite from the ground up and work closely with the most amazing people in the world. As a team member, you will:
+Develop code using a mix of JavaScript and Typescript
+Lead object relational mapping programming techniques to convert data between systems
+Containerize software with the latest Docker and Kubernetes technologies
+Participate in team agile ceremonies and sprints
+Ship application and products with cloud native tech (AWS, GCP, and Azure) and progressive web applications
+Work closely with the Intrinsic Product Director, Chief Technology Officer, and team Scrum Master to assure the platform is being delivered on time and exceeding client expectations
+Build and deploy microservice architectures and deploy software containers to US government cloud infrastructure
+Assure team cohesiveness in a leadership by example approach, building high-quality product features that exceed client expectations
+Design, build, and push a new product to an emerging marketspace
+Work on a dynamic, adaptable, and high performing team
+Dive in and rapidly grow your skills with the latest technology
+Minimum qualifications:
+
+Bachelor's degree in Computer Science, or similar engineering field
+2+ years of relevant experience on a diverse software development team
+Experience building and deploying code
+Knowledge of web application and microservice architectures
+Software development experience with one or more general purpose programming languages: JavaScript, Typescript, C#, Python, or Go
+1+ years of experience with Docker, Kubernetes, and containerization strategies
+1+ years of experience in applying ORM programing techniques
+Experience with Git in a team environment
+Experience working with one or more from the following: web application development, DevSecOps product development, distributed and parallel systems, information retrieval, developing new software applications, and/or secure software development
+US Citizenship
+Preferred qualifications:
+
+Agile scrum certifications
+Experience building and shipping products
+1+ years of software development experience, with emphasis on backend application development
+1+ years web application, API-driven, service-oriented architecture experience
+1+ years of Cloud microservices architecture development with understanding of delivering products to market (Cloud technologies should include AWS Lambda, API Gateway, DynamoDB, EC2, Cognito, Google Firebase, Google Cloud Functions, Azure DocumentDB, Azure Functions, Auth0)
+Experience working with Agile, Lean and/or Continuous Delivery approaches and best practices, such as Extreme Programming (XP)
+Interest and ability to learn new technologies as needed

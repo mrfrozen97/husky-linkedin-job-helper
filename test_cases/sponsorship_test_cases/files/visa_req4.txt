@@ -1,0 +1,42 @@
+Job Title: Software Engineer I – Applied Machine Learning
+
+Pay Type: SALARIED EXEMPT
+
+Location: Remote
+
+Citizenship: U.S. Citizenship (Required)
+
+Security Clearance Requirement: Ability to obtain and maintain Public Trust
+
+Summary Of Position Role/Responsibilities
+
+The Software Engineer I – Applied Machine Learning is an early-career, remote role supporting defense and federal-adjacent projects. The position centers on developing and implementing software solutions that leverage artificial intelligence and machine learning, primarily for cybersecurity, risk management, and compliance use cases. Responsibilities include practical engineering work within regulated environments, with systems aligned to security and compliance frameworks such as NIST, FedRAMP, and CMMC. This opportunity is ideal for candidates seeking to advance their skills at the intersection of software engineering, applied AI, and regulatory standards.
+
+Essential Functions Of The Job
+
+Contribute to software components that apply machine learning and AI techniques to security, risk, and compliance-related workflows.
+Assist in integrating AI/ML capabilities into backend services, APIs, or internal tools that support compliance and audit-focused systems.
+Support data preparation, feature extraction, and evaluation for models related to security controls, evidence analysis, or risk indicators.
+Develop and maintain Python-based services, scripts, and workflows used in ML-enabled security and compliance tooling.
+Work with senior engineers and security/compliance stakeholders to align software functionality with established frameworks such as NIST 800-53, FedRAMP, and CMMC.
+Participate in documenting technical implementations to support auditability, traceability, and governance requirements.
+Follow secure development practices and contribute to code reviews in a structured engineering environment.
+Assist with prototyping, testing, and incremental delivery of AI-enabled features.
+
+Marginal Functions Of The Job
+
+Other duties as assigned
+
+Normal Work Schedule
+
+This full-time role runs Monday to Friday, 8:30 AM–5:30 PM and requires flexibility to work remotely or on-site (if applicable per client RTO policies). On occasion additional hours may be necessary.
+
+Education, Training, And Experience
+
+Internship, academic, or project experience applying AI/ML in cybersecurity, compliance, or regulated environments.
+Exposure to security or compliance frameworks such as NIST 800-53, FedRAMP, CMMC, or ISO 27001.
+Familiarity with data processing libraries (pandas, NumPy).
+Exposure to cloud environments (AWS or Azure).
+Experience with containerization tools (Docker).
+Interest in security, governance, risk, and compliance (GRC) domains.
+Enrollment in or completion of a graduate program in computer science, machine learning, or a related field.

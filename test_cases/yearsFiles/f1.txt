@@ -1,0 +1,51 @@
+s a Full Stack Game Engineer, you will contribute to the development of gameplay features and supporting systems across Unity-based client code and backend services. You will work closely with more experienced engineers and cross-functional partners to implement well-scoped tasks while continuing to grow your technical skills and understanding of live game development.
+
+This role is ideal for an engineer early in their career who is excited to learn, enjoys hands-on development, and wants exposure to end-to-end game systems in a collaborative environment.
+
+Responsibilities
+
+Implement well-defined gameplay features or components under guidance from senior engineers.
+Contribute to client-side gameplay systems in Pokémon GO’s Unity-based client.
+Assist in building and maintaining backend services and APIs that support gameplay and live operations.
+Integrate client and server components following established patterns and designs.
+Write unit tests and participate in code reviews to improve code quality and learn best practices.
+Help debug issues and assist with supporting live systems as needed.
+Collaborate with designers, artists, and engineers to understand requirements and deliver assigned tasks.
+
+What Success Looks Like
+
+Tasks and features assigned to you are completed correctly and on time.
+Code you contribute is readable, reliable, and improves with feedback.
+You demonstrate steady growth in understanding the client/server architecture and live-game workflows.
+You ask good questions, incorporate feedback, and become increasingly independent over time.
+Teammates see you as a reliable contributor who is learning quickly.
+
+Qualifications
+
+1–3 years of professional software or game development experience, or equivalent project experience.
+Experience developing games or interactive applications using Unity, including C# scripting.
+Basic familiarity with backend services, APIs, or server-side development concepts.
+Exposure to cloud platforms such as Google Cloud Platform, AWS, or Azure (academic or professional).
+Familiarity with version control systems (e.g., Git).
+Strong problem-solving skills and willingness to learn new systems and technologies.
+Clear written and verbal communication skills.
+
+Nice to Have
+
+Internship or project experience working on games or interactive applications.
+
+For candidates in CA, CO, NJ, NY, and WA, the annual salary range is provided below. In addition to base pay, employees may be eligible for equity, bonuses, and a comprehensive benefits package, including healthcare benefits, retirement benefits, pet insurance, paid holidays, paid Scopely free days, and unlimited paid time off. Base pay offered may vary depending on job-related knowledge, skills, and experience.
+
+CA, CO, NJ, NY, and WA Annual Salary Range
+
+$107,500 - $165,000 USD
+
+About Scopely
+
+Scopely is a leading video game and global interactive entertainment company, home to many of the world’s most beloved and enduring experiences, including two of the most successful mobile games of all-time “MONOPOLY GO!” and “Pokémon GO,” along with “Stumble Guys,” “Star Trek™ Fleet Command,” “MARVEL Strike Force,” “WWE Champions,” the Scrabble® franchise, “Yahtzee® With Buddies,” and many others. Across mobile, web, PC, and console, Scopely creates, develops, publishes, and live-operates one of the most diversified and award-winning portfolios in the games industry — bringing hundreds of millions of players together through a shared love of play.
+
+Founded in 2011, Scopely is powered by its exceptional team — including thousands of world-class gamemakers around the globe, a distinctive tenet-driven culture, and its proprietary technology platform, Playgami. Together, these strengths have fueled Scopely’s position as the #1 mobile games company in the U.S. and #2 globally, generating more than $10 billion in lifetime revenue. Whether building global sensations like “MONOPOLY GO!” from the ground up, or expanding through strategic acquisitions, including the FoxNext, GSN, and Niantic games businesses — Scopely consistently delivers experiences players love today and return to for years to come.
+
+Recognized multiple times as one of the "100 Most Influential Companies in the World" by TIME magazine and one of Fast Company's "World's Most Innovative Companies" and “Best Workplaces for Innovators,” Scopely believes that video games can be a force for good — creating meaningful connections, vibrant communities, and making life better through play.
+
+Scopely has global operations and partners across four continents in more than a dozen countries worldwide. For more information, visit: https://www.scopely.com/.

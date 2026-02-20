@@ -26,7 +26,7 @@ function injectIntoJobDetails(years) {
   }
 
   resultDiv.innerText = years
-    ? `🧠 Years of Experience Required: ${years}+ years`
+    ? `🧠 Years of Experience Required: ${years} years`
     : "🧠 Years of Experience: Not specified";
 }
 

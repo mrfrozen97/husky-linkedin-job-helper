@@ -1,0 +1,50 @@
+About the job
+Company
+
+Qualcomm Technologies, Inc.
+
+Job Area
+
+Engineering Group, Engineering Group > Software Engineering
+
+General Summary
+
+Qualcomm's Government Technologies (QGOV) division develops special products based on its wireless terrestrial and satellite communication technologies for the military, federal, local, and foreign governments. In this role as a Software Engineer, you will support government-related research, development, integration and test of such systems, including adaptation and extension of commercial systems to novel applications and environments, as well as internal development efforts. Excellent written and verbal communications skills are essential.
+
+Applicants selected will be subject to a government security investigation and must meet eligibility requirements for access to classified information.
+
+ Must be a U.S. citizen and eligible to receive a U.S. Government security clearance **
+
+
+This role requires full-time onsite work in San Diego, CA (5 days per week). 
+
+Minimum Qualifications
+
+ Bachelor's degree in Engineering, Information Systems, Computer Science, or related field.
+
+
+Preferred Qualifications
+
+ 1+ year of experience with Programming Language such as C, C++, Java, Python, etc.
+ 1+ year of experience with Database Management Software.
+ 1+ year of experience with API.
+ 1+ year of work experience with Git, Perforce, or Source Code Management System.
+
+
+Principal Duties And Responsibilities
+
+ Applies Software knowledge to assist and support the design, development, creation, modification, and validation of embedded and cloud edge software, applications, and/or specialized utility programs.
+ Analyzes user needs and software requirements.
+ Designs and implements small software features for products and systems.
+ Participates in the design, coding for small features, unit testing, minor debugging fixes, and integration efforts to ensure projects are completed on schedule.
+ Assists in performing code reviews and regression tests as well as the triaging of issues to ensure the quality of code.
+ Collaborates with others inside project team to accomplish project objectives.
+ Writes technical documentation for Software projects.
+
+
+Level Of Responsibility
+
+ Works under supervision.
+ Decision-making affects direct area of work and/or work group.
+ Requires verbal and written communication skills to convey basic, routine factual information.
+ Tasks require multiple steps which can be performed in various orders; some planning, problem-solving, and prioritization must occur to complete the tasks effectively.

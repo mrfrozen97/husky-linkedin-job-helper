@@ -1,0 +1,79 @@
+About the job
+
+
+Job Description
+
+
+You may not always see it, but our technology is embedded everywhere. At
+
+BAE Systems
+ our
+
+ Electronic Systems (ES) Sector 
+engineers develop the advanced electronics that power the world’s most important missions—from keeping pilots safe in combat and ensuring communications in space to enhancing the precision and survivability of next-generation defense systems. Our innovations enable the F-35 fighter jet, strengthen electronic warfare capabilities, and support intelligence and surveillance networks that protect national security every day.
+
+We are seeking entry level candidates to come join our software engineering team at BAE Systems in
+
+southern New Hampshire in the spring/summer of 2026
+. Here, you’ll work alongside some of the brightest minds in engineering, tackling complex technical challenges that shape the future of defense and aerospace. Whether it’s designing real-time embedded software, developing advanced signal processing algorithms, or integrating mission-critical systems, you’ll help deliver the technology that defines modern electronic warfare and situational awareness.
+
+
+
+What You’ll Do
+
+
+As an Entry-Level Software Engineer, you’ll join a multi-disciplinary team where you’ll:
+
+Design, develop, and test software for advanced defense and space systems.
+Contribute to full lifecycle engineering—from coding and debugging to integration and system testing.
+Collaborate with system, hardware, and test engineers in a fast-paced, mission-driven environment.
+Support field demonstrations, software installations, and system-level testing.
+Gain exposure to advanced technologies and tools while building the foundation for a long-term engineering career.
+
+
+
+Your First Year: The Year One (YO) Experience
+
+
+Every new engineer joins our Year One (YO) program—a curated experience designed to help you thrive from day one.
+
+Connect with peers and leaders across the company through team-building events and networking sessions.
+Participate in workshops, training modules, and mentorship opportunities that accelerate your technical and professional growth.
+Gain a dedicated peer mentor and support team to guide your first year as a BAE Systems engineer.
+Participate in rotations to build your technical skillset.
+
+
+
+Why You’ll Love Working Here
+
+
+Every other Friday off with our 9/80 schedule.
+Meaningful mission: Your work directly supports the safety and success of those who serve.
+Mentorship and career growth: Structured support from experienced engineers and leaders.
+Collaborative culture: We celebrate diverse ideas, encourage curiosity, and value innovation.
+Excellent benefits package that includes tuition reimbursement for advanced degrees.
+
+
+
+Required Education, Experience, & Skills
+
+
+BS degree in Computer Science, Computer Engineering or related field received
+Less than one year of full-time professional software engineering experience (excluding internships)
+Proficiency in one or more high level programming languages (e.g., C, C++, Java, Python)
+Working knowledge of software design and code utilizing Object Oriented Analysis & Design (OOAD) techniques
+]security clearance
+
+
+
+Preferred Education, Experience, & Skills
+
+
+Security clearance (Secret or higher)
+Familiarity with modern software development practices and tools (e.g., version control, agile methods, DevOps pipelines)
+Prior internship or research experience in related field
+
+
+Pay Information
+
+Full-Time Salary Range: $64926 - $110374

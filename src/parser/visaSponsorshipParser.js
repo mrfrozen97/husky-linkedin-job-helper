@@ -5,20 +5,22 @@ export function extractVisaStatus(text) {
 
   const patterns = {
     noSponsor: [
-      /no (visa )?sponsorship/i,
       /not sponsor/i,
       /unable to sponsor/i,
       /without sponsorship/i,
+      /\b(no|not\s+eligible\s+for)\s+(work\s+)?visa\s+sponsorship\b/i,
       /\bno\s+(visa\s+)?sponsor(ship|ed|ing)?\b|\bwithout\s+(visa\s+)?sponsor(ship|ed|ing)?\b|\bwe\s+do\s+not\s+sponsor\b|\b(visa\s+)?sponsor(ship|ed|ing)?\b[\s\S]{0,20}?\bnot\s+(available|offered|provided|support(ed)?)\b/i,
 
       // Citizenship / residency requirements
       /us citizen(ship)? (required|only)/i,
-      /us citizenship/i,
+      /\b(us\s+citizen(ship)?|must\s+be\s+authorized\s+to\s+work|eligible\s+for\s+government\s+security\s+clearance|access\s+to\s+classified)\b/i,
       // Commenting for effecientcy
       // /green card (holder )?(required|only)/i,
       // /permanent resident (required|only)/i,
       /\bCitizenship Requirement\s*:\s*U\.?S\.?\s+Citizen\b/i,
       /\bU\.?S\.?\s+citizenship\b[\s\S]*?\brequired\b/i,
+      /\b(u\.?\s*s\.?\s*(person|citizen(ship)?)|security\s+clearance|obtain\s+(a\s+)?security\s+clearance|get\s+(a\s+)?security\s+clearance)\b/i,
+      
 
       // Work authorization restrictions
       /must (already )?be authorized to work/i,

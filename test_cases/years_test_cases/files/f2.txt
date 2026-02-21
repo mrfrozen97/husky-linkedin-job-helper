@@ -1,0 +1,3 @@
+Three (3) years of professional experience using C#/.NET, Golang, Rust, Java, or Kotlin. Ability to dive into Unreal, Unity, or another game engine to complete a task. Willingness to selflessly put player experiences first — before even your own code and ego. Ability to comfortably navigate and integrate with one or more cloud service providers (e.g., AWS, Azure, GCP). Proactive approach to communication, particularly when it comes to unblocking yourself and navigating obstacles as part of a team.
+
+Expected: 3

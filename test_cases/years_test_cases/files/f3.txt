@@ -1,0 +1,70 @@
+About Silverchair
+
+Silverchair is the premier independent platform partner for scholarly and professional publishers, dedicated to expanding the reach of the world’s most valuable knowledge. By connecting creators, publishers, and users, we amplify the impact of scholarship and enhance the accessibility of critical information. Our global teams build, maintain, and innovate platforms across the publishing lifecycle, facilitating submission, peer review, hosting, dissemination, and impact measurement.
+The Silverchair Platform hosts critical research content from such prestigious publishers as Oxford University Press, the American Medical Association, and McGraw Hill, comprising more than 12 million articles and 97k books. ScholarOne Manuscripts is the world's leading scholarly workflow management platform, processing over 3 million manuscripts annually for 9,000+ journal sites and serving 1.1 million monthly active users. ScholarOne Conferences streamlines the academic conference lifecycle for 135+ conferences annually, supporting scholarly publishers and associations worldwide.
+Silverchair is a remote-first organization with Silverchairians living and working in over ten countries supporting our clients and operations throughout the globe.
+
+
+DEI Statement
+
+At Silverchair, we celebrate and embrace diversity in all its forms. We are committed to fostering an inclusive environment from the moment you consider joining our team. We actively encourage candidates from diverse backgrounds to apply, believing that a variety of perspectives and experiences enriches our community, drives innovation, and strengthens our impact.
+Equity and inclusion are at the core of our hiring practices, and we strive to build a team that reflects a broad spectrum of cultures, experiences, and viewpoints. We are particularly committed to increasing representation from groups historically underrepresented in technology careers. Your unique experiences and perspectives are not just welcomed but are integral to our collective success. Join us in our mission to create a culture that unites and brings out the best in all of us.
+Learn more about our commitment to diversity, equity, and inclusion at Silverchair.
+
+
+
+Overview:
+
+The Associate Software Developer performs a variety of programming assignments requiring knowledge of established programming procedures and data processing requirements. Responsibilities include maintaining and modifying programs, designing, building and implementing new Web pages and sites, and using a variety of Web development languages and technologies.
+
+
+Essential Functions:
+
+Code, test, and troubleshoot programs utilizing the appropriate hardware, database, and programming technology
+Contribute to the analysis of functional requirements
+Test and develop programming modifications
+Display your passion for quality and writing clean and robust code that scales and performs well
+Analyze performance of programs and take action to correct deficiences based on consultation with users, supervisor, and other project team members
+Problem-solve and think laterally as part of a team, or individually, to meet the needs of the project
+Understand standard systems development lifecycle processes and apply our methodologies effectively on client engagements
+Adhere to coding standards defined by technical management
+Maintain confidentiality with regard to the information being processed, stored or accessed
+Perform additional tasks as needed to meet the needs of the team and department, and to support Silverchair's business needs
+Demonstrate proficiency in leveraging Artificial Intelligence tools and technologies to enhance workflow efficiency, automate repetitive tasks, and/or derive actionable insights.
+AI Utilization
+Maintain AI literacy and understanding of ethical AI applications in academic publishing and scholarly communications
+Demonstrate basic prompt engineering skills for effective AI tool utilization
+Exercise judgment in determining when AI assistance is and is not appropriate for tasks
+Ensure compliance with Silverchair's AI usage policies and data protection requirements
+Collaborate effectively with AI tools while maintaining human oversight and professional standards
+Apply advanced prompt patterns for generating high-quality, maintainable code that meets established standards.
+Design AI integration architectures that incorporate machine learning models into existing software systems.
+Optimize AI-enhanced applications for performance, including model inference and resource management in production.
+Implement responsible AI practices including monitoring, bias detection, and ethical governance frameworks.
+Train AI systems on Silverchair-specific workflows, domain knowledge, and business processes.
+
+
+Required Skills:
+
+Qualified candidates will have the desire to thrive in a collaborative, team-oriented environment, the ability to quickly learn and effectively apply new technologies and concepts, and the initiative to excel in a high-performance work culture.
+
+
+Desired Experience:
+
+0 to 3 years' experience with Microsoft web technologies, including ASP.NET, C#, VB.NET, and the .NET Framework
+0 to 3 years' experience using MS SQL Server, should be able to write and optimize SQL code
+Bachelor’s degree in computer science or related degree, lower degrees must be supplemented with additional relevant experience
+Ability to build Software as a Service (SaaS) applications understanding and coding to meet requirements in an Object Oriented manner
+Knowledge and experience in other technologies and languages such as HTML, DHTML, CSS, AJAX, JavaScript, JQuery, and XML is a plus
+
+
+Disclaimer: At this time, we cannot sponsor a new applicant for employment authorization for this position.
+
+
+No agencies please.
+
+
+
+Salary Range: $70,000 - $75,000
+
+Expected: 0-3

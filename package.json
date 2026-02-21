@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "build": "vite build",
-    "test:sponsor": "node runSponsorshipTests.js"
+    "test:sponsor": "node runSponsorshipTests.js",
+    "test": "node test_cases/runAllTests.js"
   },
   "keywords": [],
   "author": "",

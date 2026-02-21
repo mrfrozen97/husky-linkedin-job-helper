@@ -85,7 +85,7 @@ Your project includes a Node-based test runner for visa sponsorship classificati
 From project root:
 
 ```bash
-node test_cases/sponsorship_test_cases/runSponsorshipTests.js
+npm test
 ```
 
 

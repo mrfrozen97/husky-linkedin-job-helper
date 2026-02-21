@@ -6,10 +6,12 @@ function extractYearsOfExperience(text) {
 
   const sentences = text.split(/[\n\.!?]+/);
 
-  // Range OR single with optional +
+  // Patterns:
+  // 1️⃣ Range (1-3 years or 1 to 3 years)
+  // 2️⃣ Single numeric (3+ years)
+  // 3️⃣ Word + (3) years → Three (3) years
   const yearsPattern =
-    /(\d+)\s*(?:-|to)\s*(\d+)\s*(?:years?|yrs?)|\b(\d+)(\+)?\s*(?:years?|yrs?)\b/i;
-
+  /(\d+)\s*(?:[\-\u2013\u2014]|to)\s*(\d+)\s*(?:years?|yrs?)|\b(\d+)(\+)?\s*(?:years?|yrs?)\b|\b[A-Za-z]+\s*\((\d+)\)\s*(?:years?|yrs?)\b/i;
   const experienceIndicator =
     /\b(experience|exp|professional|industry|background|hands[-\s]?on|development)\b/i;
 
@@ -31,13 +33,19 @@ function extractYearsOfExperience(text) {
       const high = parseInt(match[2], 10);
 
       extractedYears = high;
-      formatted = `${low}-${high}`; // clean range string
+      formatted = `${low}-${high}`;
     }
 
-    // ✅ Case 2: Single (3 years or 3+ years)
+    // ✅ Case 2: Single numeric (3 or 3+ years)
     else if (match[3]) {
       extractedYears = parseInt(match[3], 10);
       formatted = match[4] ? `${match[3]}+` : `${match[3]}`;
+    }
+
+    // ✅ Case 3: WordNumber (3) years
+    else if (match[5]) {
+      extractedYears = parseInt(match[5], 10);
+      formatted = `${match[5]}`;
     }
 
     if (extractedYears != null) {
@@ -49,11 +57,6 @@ function extractYearsOfExperience(text) {
   }
 
   if (maxYears == null) return null;
-
-  // return {
-  //   maxYears,
-  //   display: displayValue
-  // };
 
   return displayValue;
 }

@@ -2,7 +2,36 @@ console.log("LinkedIn Job Assistant Loaded");
 
 import extractYearsOfExperience from "../parser/yearParser";
 import { extractVisaStatus } from "../parser/visaSponsorshipParser";
+import { injectJobListSummary } from "../ui/linkedinListingDisplay";
+import { findH1BSponsor } from "../parser/companyNameParser";
 import {displayH1BStatus} from "../ui/h1bSponsorUI";
+
+// ===============================
+// Global Sponsor Cache (LOAD ONCE)
+// ===============================
+let sponsorData = null;
+let sponsorDataPromise = null;
+
+function loadSponsorData() {
+  if (!sponsorDataPromise) {
+    sponsorDataPromise = fetch(
+      chrome.runtime.getURL("h1b_companies.json")
+    )
+      .then(res => res.json())
+      .then(data => {
+        sponsorData = data;
+        console.log("H1B sponsor data loaded");
+        return data;
+      })
+      .catch(err => {
+        console.error("Failed to load H1B data:", err);
+      });
+  }
+  return sponsorDataPromise;
+}
+
+// Preload immediately
+loadSponsorData();
 
 // ===============================
 // Get Job Description Container
@@ -20,12 +49,10 @@ function getJobDescriptionContainer() {
 // Get Company Name
 // ===============================
 function getCompanyName() {
-  // 1️⃣ Try old layout first
   let companyElement = document.querySelector(
     ".job-details-jobs-unified-top-card__company-name a"
   );
 
-  // 2️⃣ Fallback: any LinkedIn company link
   if (!companyElement) {
     companyElement = document.querySelector('a[href*="/company/"]');
   }
@@ -48,19 +75,20 @@ function injectIntoJobDetails(years) {
     resultDiv = document.createElement("div");
     resultDiv.className = "exp-result-box";
 
-    // Styling
-    resultDiv.style.padding = "16px";
-    resultDiv.style.marginBottom = "16px";
-    resultDiv.style.background = "#e8f3ff";
-    resultDiv.style.border = "1px solid #0a66c2";
-    resultDiv.style.borderRadius = "10px";
-    resultDiv.style.fontSize = "16px";
-    resultDiv.style.lineHeight = "1.6";
-    resultDiv.style.fontWeight = "600";
-    resultDiv.style.color = "#0a66c2";
-    resultDiv.style.boxShadow = "0 1px 3px rgba(0,0,0,0.1)";
-    resultDiv.style.fontFamily =
-      "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif";
+    Object.assign(resultDiv.style, {
+      padding: "16px",
+      marginBottom: "16px",
+      background: "#e8f3ff",
+      border: "1px solid #0a66c2",
+      borderRadius: "10px",
+      fontSize: "16px",
+      lineHeight: "1.6",
+      fontWeight: "600",
+      color: "#0a66c2",
+      boxShadow: "0 1px 3px rgba(0,0,0,0.1)",
+      fontFamily:
+        "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+    });
 
     jobBox.prepend(resultDiv);
   }
@@ -69,8 +97,6 @@ function injectIntoJobDetails(years) {
     ? `🧠 Years of Experience Required: ${years} years`
     : "🧠 Years of Experience: Not specified";
 }
-
-
 
 // ===============================
 // Visa UI
@@ -85,16 +111,17 @@ function displayVisaStatus({ status, sentence }) {
     resultDiv = document.createElement("div");
     resultDiv.className = "visa-result-box";
 
-    // Base styling
-    resultDiv.style.padding = "16px";
-    resultDiv.style.marginBottom = "16px";
-    resultDiv.style.borderRadius = "10px";
-    resultDiv.style.fontSize = "16px";
-    resultDiv.style.lineHeight = "1.6";
-    resultDiv.style.fontWeight = "600";
-    resultDiv.style.boxShadow = "0 1px 3px rgba(0,0,0,0.1)";
-    resultDiv.style.fontFamily =
-      "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif";
+    Object.assign(resultDiv.style, {
+      padding: "16px",
+      marginBottom: "16px",
+      borderRadius: "10px",
+      fontSize: "16px",
+      lineHeight: "1.6",
+      fontWeight: "600",
+      boxShadow: "0 1px 3px rgba(0,0,0,0.1)",
+      fontFamily:
+        "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+    });
 
     jobBox.prepend(resultDiv);
   }
@@ -117,8 +144,10 @@ function displayVisaStatus({ status, sentence }) {
     label = "🟡 Visa Sponsorship Unknown";
   }
 
-  resultDiv.style.background = background;
-  resultDiv.style.color = textColor;
+  Object.assign(resultDiv.style, {
+    background,
+    color: textColor
+  });
 
   resultDiv.innerHTML = `
     ${label}
@@ -130,9 +159,9 @@ function displayVisaStatus({ status, sentence }) {
 }
 
 // ===============================
-// Process Job
+// Process Job (OPTIMIZED)
 // ===============================
-function processCurrentJob() {
+async function processCurrentJob() {
   const jobBox = getJobDescriptionContainer();
   if (!jobBox) return;
 
@@ -142,17 +171,26 @@ function processCurrentJob() {
   const descriptionText = jobBox.innerText;
 
   const years = extractYearsOfExperience(descriptionText);
-  const result = extractVisaStatus(descriptionText);
+  const visaResult = extractVisaStatus(descriptionText);
   const companyName = getCompanyName();
 
-  fetch(chrome.runtime.getURL("h1b_companies.json"))
-    .then(res => res.json())
-    .then(data => {
-      displayH1BStatus(companyName, data);
-    });
+  // Ensure sponsor data is ready
+  await loadSponsorData();
+
+  const matched =
+    sponsorData && companyName
+      ? findH1BSponsor(companyName, sponsorData)
+      : null;
+
+  injectJobListSummary({
+    years,
+    visaStatus: visaResult.status,
+    h1bStatus: !!matched
+  });
 
   injectIntoJobDetails(years);
-  displayVisaStatus(result);
+  displayVisaStatus(visaResult);
+  displayH1BStatus(matched);
 }
 
 // ===============================

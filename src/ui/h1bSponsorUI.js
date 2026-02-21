@@ -1,5 +1,3 @@
-import {findH1BSponsor} from "../parser/companyNameParser";
-
 function getJobDescriptionContainer() {
   return (
     document.querySelector(".jobs-box__html-content") ||
@@ -12,37 +10,39 @@ function getJobDescriptionContainer() {
 // ===============================
 // H1B Sponsor UI
 // ===============================
-export function displayH1BStatus(companyName, sponsorData) {
+export function displayH1BStatus({ isSponsor }) {
   const jobBox = getJobDescriptionContainer();
-  if (!jobBox || !companyName) return;
+  if (!jobBox) return;
 
+  // Remove old box if exists
   jobBox.querySelector(".h1b-result-box")?.remove();
-
-  const matched = findH1BSponsor(companyName, sponsorData);
 
   const resultDiv = document.createElement("div");
   resultDiv.className = "h1b-result-box";
 
-  resultDiv.style.padding = "16px";
-  resultDiv.style.marginBottom = "16px";
-  resultDiv.style.borderRadius = "10px";
-  resultDiv.style.fontSize = "16px";
-  resultDiv.style.lineHeight = "1.6";
-  resultDiv.style.fontWeight = "600";
-  resultDiv.style.boxShadow = "0 1px 3px rgba(0,0,0,0.1)";
-  resultDiv.style.fontFamily =
-    "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif";
+  Object.assign(resultDiv.style, {
+    padding: "16px",
+    marginBottom: "16px",
+    borderRadius: "10px",
+    fontSize: "16px",
+    lineHeight: "1.6",
+    fontWeight: "600",
+    boxShadow: "0 1px 3px rgba(0,0,0,0.1)",
+    fontFamily:
+      "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+  });
 
-  if (matched) {
+  if (isSponsor) {
     resultDiv.style.background = "#d4edda";
     resultDiv.style.color = "#155724";
-    resultDiv.innerText = `🟢 H1B Sponsor Detected (Past Filings Found)`;
+    resultDiv.innerText =
+      "🟢 H1B Sponsor Detected (Past Filings Found)";
   } else {
     resultDiv.style.background = "#f8d7da";
     resultDiv.style.color = "#721c24";
-    resultDiv.innerText = `🔴 No H1B Sponsorship Record Found`;
+    resultDiv.innerText =
+      "🔴 No H1B Sponsorship Record Found";
   }
 
   jobBox.prepend(resultDiv);
 }
-

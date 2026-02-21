@@ -2,6 +2,7 @@ console.log("LinkedIn Job Assistant Loaded");
 
 import extractYearsOfExperience from "../parser/yearParser";
 import { extractVisaStatus } from "../parser/visaSponsorshipParser";
+import {displayH1BStatus} from "../ui/h1bSponsorUI";
 
 // ===============================
 // Get Job Description Container
@@ -13,6 +14,25 @@ function getJobDescriptionContainer() {
     document.querySelector('[data-test-id="job-details"]') ||
     document.querySelector(".job-view-layout")
   );
+}
+
+// ===============================
+// Get Company Name
+// ===============================
+function getCompanyName() {
+  // 1️⃣ Try old layout first
+  let companyElement = document.querySelector(
+    ".job-details-jobs-unified-top-card__company-name a"
+  );
+
+  // 2️⃣ Fallback: any LinkedIn company link
+  if (!companyElement) {
+    companyElement = document.querySelector('a[href*="/company/"]');
+  }
+
+  if (!companyElement) return null;
+
+  return companyElement.innerText.trim();
 }
 
 // ===============================
@@ -123,6 +143,13 @@ function processCurrentJob() {
 
   const years = extractYearsOfExperience(descriptionText);
   const result = extractVisaStatus(descriptionText);
+  const companyName = getCompanyName();
+
+  fetch(chrome.runtime.getURL("h1b_companies.json"))
+    .then(res => res.json())
+    .then(data => {
+      displayH1BStatus(companyName, data);
+    });
 
   injectIntoJobDetails(years);
   displayVisaStatus(result);

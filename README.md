@@ -5,9 +5,9 @@ This is a Chrome Extension (Manifest V3) that analyzes job descriptions and clas
 
 * Years of Experience Required
 
-* 🟢 Sponsor Available
-* 🔴 No Sponsorship
-* 🟡 Unknown
+* 🟢 Sponsor Available, 🔴 No Sponsorship, 🟡 Unknown
+
+* H1-B Sponsorship Available?
 
 
 # 📦 Project Structure
@@ -29,6 +29,9 @@ simple-google-chrome-extension/
 │   └── sponsorship_test_cases/
 │       ├── files
 │       └── runSponsorshipTests.js
+│   └── years_test_cases/
+│       ├── files
+│       └── runYearsOfExpTests.js
 │
 ├── vite.config.js
 ├── package.json
@@ -78,7 +81,7 @@ After loading, the extension will appear in your extensions list.
 
 # 🧪 Running Tests (Test Driven Development)
 
-Your project includes a Node-based test runner for visa sponsorship classification.
+Your project includes a Node-based test runner for testing the essential functions.
 
 ## Run Tests
 

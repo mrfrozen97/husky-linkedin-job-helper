@@ -1,13 +1,25 @@
-
 console.log("LinkedIn Job Assistant Loaded");
+
 import extractYearsOfExperience from "../parser/yearParser";
 import { extractVisaStatus } from "../parser/visaSponsorshipParser";
 
 // ===============================
-// Inject / Update UI
+// Get Job Description Container
+// ===============================
+function getJobDescriptionContainer() {
+  return (
+    document.querySelector(".jobs-box__html-content") ||
+    document.querySelector('[data-sdui-component*="aboutTheJob"]') ||
+    document.querySelector('[data-test-id="job-details"]') ||
+    document.querySelector(".job-view-layout")
+  );
+}
+
+// ===============================
+// Inject Years UI
 // ===============================
 function injectIntoJobDetails(years) {
-  const jobBox = document.querySelector(".jobs-box__html-content");
+  const jobBox = getJobDescriptionContainer();
   if (!jobBox) return;
 
   let resultDiv = jobBox.querySelector(".exp-result-box");
@@ -15,12 +27,20 @@ function injectIntoJobDetails(years) {
   if (!resultDiv) {
     resultDiv = document.createElement("div");
     resultDiv.className = "exp-result-box";
-    resultDiv.style.padding = "12px";
-    resultDiv.style.marginBottom = "12px";
+
+    // Styling
+    resultDiv.style.padding = "16px";
+    resultDiv.style.marginBottom = "16px";
     resultDiv.style.background = "#e8f3ff";
     resultDiv.style.border = "1px solid #0a66c2";
-    resultDiv.style.borderRadius = "6px";
+    resultDiv.style.borderRadius = "10px";
+    resultDiv.style.fontSize = "16px";
+    resultDiv.style.lineHeight = "1.6";
     resultDiv.style.fontWeight = "600";
+    resultDiv.style.color = "#0a66c2";
+    resultDiv.style.boxShadow = "0 1px 3px rgba(0,0,0,0.1)";
+    resultDiv.style.fontFamily =
+      "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif";
 
     jobBox.prepend(resultDiv);
   }
@@ -30,18 +50,75 @@ function injectIntoJobDetails(years) {
     : "🧠 Years of Experience: Not specified";
 }
 
+
+
+// ===============================
+// Visa UI
+// ===============================
+function displayVisaStatus({ status, sentence }) {
+  const jobBox = getJobDescriptionContainer();
+  if (!jobBox) return;
+
+  let resultDiv = jobBox.querySelector(".visa-result-box");
+
+  if (!resultDiv) {
+    resultDiv = document.createElement("div");
+    resultDiv.className = "visa-result-box";
+
+    // Base styling
+    resultDiv.style.padding = "16px";
+    resultDiv.style.marginBottom = "16px";
+    resultDiv.style.borderRadius = "10px";
+    resultDiv.style.fontSize = "16px";
+    resultDiv.style.lineHeight = "1.6";
+    resultDiv.style.fontWeight = "600";
+    resultDiv.style.boxShadow = "0 1px 3px rgba(0,0,0,0.1)";
+    resultDiv.style.fontFamily =
+      "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif";
+
+    jobBox.prepend(resultDiv);
+  }
+
+  let background;
+  let textColor;
+  let label;
+
+  if (status === "sponsor") {
+    background = "#d4edda";
+    textColor = "#155724";
+    label = "🟢 Visa Sponsorship Available";
+  } else if (status === "no_sponsor") {
+    background = "#f8d7da";
+    textColor = "#721c24";
+    label = "🔴 No Visa Sponsorship";
+  } else {
+    background = "#fff3cd";
+    textColor = "#856404";
+    label = "🟡 Visa Sponsorship Unknown";
+  }
+
+  resultDiv.style.background = background;
+  resultDiv.style.color = textColor;
+
+  resultDiv.innerHTML = `
+    ${label}
+    <br/>
+    <span style="font-size:14px; font-weight:500;">
+      ${sentence ?? "No explicit statement found."}
+    </span>
+  `;
+}
+
 // ===============================
 // Process Job
 // ===============================
 function processCurrentJob() {
-  const jobBox = document.querySelector(".jobs-box__html-content");
+  const jobBox = getJobDescriptionContainer();
   if (!jobBox) return;
 
-  // 🔥 Remove ALL previously injected UI
   jobBox.querySelector(".exp-result-box")?.remove();
   jobBox.querySelector(".visa-result-box")?.remove();
 
-  // Now extract clean text
   const descriptionText = jobBox.innerText;
 
   const years = extractYearsOfExperience(descriptionText);
@@ -51,16 +128,14 @@ function processCurrentJob() {
   displayVisaStatus(result);
 }
 
-
-
 // ===============================
-// Watch URL change (SPA safe)
+// SPA Safe Detection
 // ===============================
 let lastUrl = location.href;
 
 function waitForNewJobAndProcess() {
   const interval = setInterval(() => {
-    const jobBox = document.querySelector(".jobs-box__html-content");
+    const jobBox = getJobDescriptionContainer();
 
     if (jobBox && jobBox.innerText.trim().length > 100) {
       clearInterval(interval);
@@ -69,53 +144,9 @@ function waitForNewJobAndProcess() {
   }, 300);
 }
 
-
-function displayVisaStatus({ status, sentence }) {
-  const jobBox = document.querySelector(".jobs-box__html-content");
-  if (!jobBox) return;
-
-  let resultDiv = jobBox.querySelector(".visa-result-box");
-
-  if (!resultDiv) {
-    resultDiv = document.createElement("div");
-    resultDiv.className = "visa-result-box";
-    resultDiv.style.padding = "12px";
-    resultDiv.style.marginBottom = "12px";
-    resultDiv.style.borderRadius = "6px";
-    resultDiv.style.fontWeight = "600";
-
-    jobBox.prepend(resultDiv);
-  }
-
-  let color;
-  let label;
-
-  if (status === "sponsor") {
-    color = "#d4edda";
-    label = "🟢 Visa Sponsorship Available";
-  } else if (status === "no_sponsor") {
-    color = "#f8d7da";
-    label = "🔴 No Visa Sponsorship";
-  } else {
-    color = "#fff3cd";
-    label = "🟡 Visa Sponsorship Unknown";
-  }
-
-  resultDiv.style.background = color;
-  console.log(sentence);
-  resultDiv.innerHTML = `
-    ${label}
-    <br/>
-    <small>${sentence ?? "No explicit statement found."}</small>
-  `;
-}
-
-
 setInterval(() => {
   if (location.href !== lastUrl) {
-    console.log("URL changed:", location.href);
     lastUrl = location.href;
-
     waitForNewJobAndProcess();
   }
 }, 500);

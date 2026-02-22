@@ -6,8 +6,9 @@ export function extractVisaStatus(text) {
   const patterns = {
     noSponsor: [
       /not sponsor/i,
-      /unable to sponsor/i,
-      /without sponsorship/i,
+      /\b(not|does not|cannot|won't|unable to)\b(?:\s+\w+){0,10}?\s+(work\s+)?visa\s+sponsor(ship|ed|ing)?\b/i,
+      /\b(will|must) not require (work )?visa (sponsorship|support)\b/i,
+      /\bonly consider applicants who (are|must be) (presently )?authorized to work\b/i,
       /\b(no|not\s+eligible\s+for)\s+(work\s+)?visa\s+sponsorship\b/i,
       /\bno\s+(visa\s+)?sponsor(ship|ed|ing)?\b|\bwithout\s+(visa\s+)?sponsor(ship|ed|ing)?\b|\bwe\s+do\s+not\s+sponsor\b|\b(visa\s+)?sponsor(ship|ed|ing)?\b[\s\S]{0,20}?\bnot\s+(available|offered|provided|support(ed)?)\b/i,
 

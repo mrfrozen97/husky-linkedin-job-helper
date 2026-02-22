@@ -190,7 +190,7 @@ async function processCurrentJob() {
 
   injectIntoJobDetails(years);
   displayVisaStatus(visaResult);
-  displayH1BStatus(matched);
+  displayH1BStatus({ isSponsor: matched });
 }
 
 // ===============================

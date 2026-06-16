@@ -29,6 +29,7 @@ export function extractVisaStatus(text) {
       /only considering candidates who are authorized/i,
       /must have unrestricted work authorization/i,
       /no visa support/i,
+      /\b(no|not|will not|cannot|do not|does not|unable to)\b[\s\S]{0,30}?\b(visa\s+sponsor(ship|ed|ing)?)\b/i
     ],
 
     sponsor: [

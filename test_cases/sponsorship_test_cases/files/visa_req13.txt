@@ -1,0 +1,51 @@
+About the job
+Cox Automotive is seeking a Software Engineer to join our agile development team in spread across multiple Cox Automotive sites. This role is ideal for a curious, adaptable engineer who thrives in a fast-paced environment, enjoys working across the stack, and is excited to explore emerging technologies, particularly artificial intelligence (AI) to help drive the next generation of our core products.
+
+As a team member, you will help drive new practices, have access to senior engineers for mentorship and help define and champion best practices on an AI-native team. You'll work in a collaborative, cross-functional Agile environment using Kanban, partnering closely with product owners, other engineers, and other teams.
+
+Our teams' responsibilities are part of the Next Generation Platforms effort, focused on AI related tooling, and a broader effort to modernize development practices across the enterprise.
+
+Job Responsibilities
+
+Build foundational skills in software engineering concepts, tools, and methodologies, including responsible use of AI-assisted development.
+
+Contribute to coding tasks by writing tests, pairing with teammates, and using AI tools to support code generation and troubleshooting.
+
+Help translate business and functional requirements into clear technical tasks and participate in planning activities.
+
+Identify opportunities to automate manual workflows using AI-enabled and traditional engineering tools.
+Assist in diagnosing and resolving defects through debugging and AI-guided root-cause analysis.
+Support modernization by updating legacy code, aiding migration efforts, and using AI tools to analyze older patterns.
+Learn and apply secure coding practices, using AI-assisted analysis to surface vulnerabilities and quality issues.
+Help investigate performance or system bottlenecks using diagnostics, testing, and AI-supported analysis.
+Participate in performance testing and assist in resolving issues found through analytical and AI-driven review.
+Document processes and best practices, using AI tools to create clear, consistent documentation and share insights that improve team workflows.
+
+Required Experience, Knowledge, And Skills
+
+Bachelor's degree in a related discipline and generally less than 2 years of experience in a related field.
+Basic experience with Java, Python, JavaScript
+Basic understanding of distributed systems concepts and how failures can occur.
+Exposure to automation, developer tools, or internal platforms (coursework, internships, or projects acceptable).
+Familiarity with Git/version control and awareness of CI/CD pipelines.
+Foundational knowledge of cloud services (AWS preferred; Azure a plus).
+Interest in or exposure to AI-assisted development tools and practices.
+Ability to participate in debugging, incident follow-up, and basic observability activities with guidance.
+Awareness of reliability engineering principles and automated testing practices.
+Basic understanding of monitoring, logging, and alerting concepts.
+Strong communication skills and the ability to collaborate effectively within an engineering team.
+Demonstrated curiosity, problem-solving ability, and willingness to learn new technologies and best practices.
+
+Note:Applicants must currently be authorized to work in the United States for any employer without current or future sponsorship. No OPT, CPT, STEM/OPT or visa sponsorship now or in future
+
+USD 74,000.00 - 111,000.00 per year
+
+Compensation
+
+Compensation includes a base salary of $74,000.00 - $111,000.00. The base salary may vary within the anticipated base pay range based on factors such as the ultimate location of the position and the selected candidate's knowledge, skills, and abilities. Position may be eligible for additional compensation that may include an incentive program.
+
+Benefits
+
+The Company offers eligible employees the flexibility to take as much vacation with pay as they deem consistent with their duties, the company's needs, and its obligations; seven paid holidays throughout the calendar year; and up to 160 hours of paid wellness annually for their own wellness or that of family members. Employees are also eligible for additional paid time off in the form of bereavement leave, time off to vote, jury duty leave, volunteer time off, military leave, and parental leave.
+
+Applicants must currently be authorized to work in the United States for any employer without current or future sponsorship. No OPT, CPT, STEM/OPT or visa sponsorship now or in future.

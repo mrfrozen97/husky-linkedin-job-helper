@@ -5,7 +5,7 @@
   "main": "background.js",
   "type": "module",
   "scripts": {
-    "build": "vite build",
+    "build": "node build.js",
     "test:sponsor": "node runSponsorshipTests.js",
     "test": "node test_cases/runAllTests.js"
   },

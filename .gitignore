@@ -35,6 +35,8 @@ bower_components
 # node-waf configuration
 .lock-wscript
 
+husky-job-helper-1.0.zip
+
 # Compiled binary addons (https://nodejs.org/api/addons.html)
 build/Release
 

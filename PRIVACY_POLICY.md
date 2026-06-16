@@ -34,4 +34,4 @@ This policy may be updated if the extension's behavior changes. Updates will be 
 
 ## Contact
 
-For questions about this privacy policy, contact the repository owner through GitHub.
+For questions about this privacy policy, contact tanishq.nimale97@gmail.com.
